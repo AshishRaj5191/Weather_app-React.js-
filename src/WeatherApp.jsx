@@ -7,7 +7,7 @@ const WeatherApp = () => {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const API_KEY = "af9f63c59a649f27d602b96a43d0bd14";
+  const API_KEY = "d95542ab4a577af640307b7fb4ab2aa9";
 
   const getWeather = async () => {
     if (!city.trim()) {
