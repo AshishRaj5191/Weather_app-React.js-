@@ -25,11 +25,11 @@ const WeatherApp = () => {
 
       const data = await res.json();
 
-      if (data.cod === 200) {
+      if (parseInt(data.cod) === 200) {
         setWeather(data);
       } else {
         setWeather(null);
-        setError("City not found");
+        setError(data.message || "City not found");
       }
     } catch (err) {
       setError("Error fetching weather");
